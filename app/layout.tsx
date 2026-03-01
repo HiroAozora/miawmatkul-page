@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   title: "MiawMatkul",
   description:
     "Asisten pintar untuk manajemen jadwal kuliah dan laprak khusus mahasiswa.",
+  icons: {
+    icon: "/miawmatkul.svg",
+    shortcut: "/miawmatkul.svg",
+    apple: "/miawmatkul.svg",
+  },
 };
 
 import { ThemeProvider } from "next-themes";
