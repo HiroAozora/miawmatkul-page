@@ -7,7 +7,7 @@ import {
   useTransform,
   useScroll,
 } from "framer-motion";
-import { Download, ChevronRight, MapPin, Map } from "lucide-react";
+import { Download, Github, MapPin, Map } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
@@ -163,12 +163,21 @@ export function HeroSection() {
                 </a>
               </Button>
               <Button
+                asChild
                 size="lg"
                 variant="outline"
                 className="rounded-full h-12 px-8 text-base bg-background/50 backdrop-blur-sm border-2 hover:bg-[var(--primary)]/10 transition-colors"
               >
-                Pelajari Fitur
-                <ChevronRight className="w-5 h-5 ml-2" />
+                <a
+                  href="https://github.com/HiroAozora"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="w-7 h-7 rounded-full bg-foreground text-background flex items-center justify-center -ml-2">
+                    <Github className="w-4 h-4 fill-current" />
+                  </div>
+                  Lihat Source Code
+                </a>
               </Button>
             </div>
           </motion.div>

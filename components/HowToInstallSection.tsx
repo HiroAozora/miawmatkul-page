@@ -14,28 +14,28 @@ const steps = [
     step: "1",
     title: "Download File APK",
     description:
-      "Ketuk tombol Download di website ini untuk mengunduh file MiawMatkul_v1.0.apk ke penyimpanan HP Anda.",
+      "Klik tombol Download di website ini untuk mengunduh versi terbaru aplikasi MiawMatkul ke memori internal HP kamu.",
     icon: <Download className="w-5 h-5" />,
   },
   {
     step: "2",
-    title: "Buka File APK",
-    description:
-      "Setelah unduhan selesai, buka notifikasi atau pergi ke folder 'Downloads' di File Manager untuk membuka file APK tersebut.",
-    icon: <FileDown className="w-5 h-5" />,
-  },
-  {
-    step: "3",
     title: "Izinkan Install dari Sumber Tidak Dikenal",
     description:
-      "Jika muncul peringatan keamanan, pergi ke Pengaturan > Keamanan > aktifkan 'Install from Unknown Sources' (Instal dari sumber tidak dikenal).",
+      "Buka Pengaturan HP > Keamanan, lalu aktifkan 'Install Unknown Apps' untuk file manager atau browser yang kamu gunakan.",
     icon: <Settings className="w-5 h-5" />,
   },
   {
-    step: "4",
-    title: "Login & Atur Jadwal!",
+    step: "3",
+    title: "Install & Buka Aplikasi",
     description:
-      "Buka aplikasi MiawMatkul, lakukan registrasi/login, dan mulai tata jadwal kuliah serta deadline laprakmu dengan rapi.",
+      "Buka file APK yang sudah didownload, klik Install, lalu tunggu hingga proses selesai.",
+    icon: <FileDown className="w-5 h-5" />,
+  },
+  {
+    step: "4",
+    title: "Isi Data Diri & Nikmati!",
+    description:
+      "Buka aplikasi, masukkan Nama dan Kelasmu di popup perkenalan awal, lalu mulailah mengatur jadwal kuliahmu dengan lebih rapi.",
     icon: <LogIn className="w-5 h-5" />,
   },
 ];

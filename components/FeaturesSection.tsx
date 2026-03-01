@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Calendar, Bell, MapPin, Moon } from "lucide-react";
+import { Calendar, Bell, Sparkles, RefreshCw } from "lucide-react";
 import {
   Card,
   CardContent,
@@ -12,28 +12,28 @@ import {
 
 const features = [
   {
-    title: "Jadwal Terorganisir",
+    title: "Jadwal & Ruangan Terorganisir",
     description:
-      "Semua jadwal kuliah harian dan mingguan tersusun rapi dalam satu tampilan kalender yang mudah dibaca.",
+      "Semua jadwal kuliah harian dan ruangan tersusun rapi menggunakan sistem kalender yang dinamis, didukung database Isar yang sangat cepat.",
     icon: <Calendar className="w-6 h-6 text-[var(--primary)]" />,
   },
   {
-    title: "Pengingat Pintar",
+    title: "Notifikasi Otomatis (FCM)",
     description:
-      "Dapatkan notifikasi sebelum kelas dimulai atau batas waktu pengumpulan laporan praktikum habis.",
+      "Terintegrasi penuh dengan Firebase Cloud Messaging untuk menerima pengumuman mendadak atau informasi penting dari admin kampus secara real-time.",
     icon: <Bell className="w-6 h-6 text-[var(--primary)]" />,
   },
   {
-    title: "Info Ruangan",
+    title: "Template Jadwal Cepat",
     description:
-      "Tidak ada lagi drama salah kelas karena lupa ruangan atau gedung tempat kuliah berlangsung.",
-    icon: <MapPin className="w-6 h-6 text-[var(--primary)]" />,
+      "Nggak perlu input manual satu per satu! Tinggal ketik teks jadwal dari WA, dan sistem akan meng-extract data hari, jam, matkul, dosen, hingga ruangan secara otomatis.",
+    icon: <Sparkles className="w-6 h-6 text-[var(--primary)]" />,
   },
   {
-    title: "Mode Gelap & Terang",
+    title: "Sistem Update OTA",
     description:
-      "Tampilan aplikasi yang bisa disesuaikan dengan kenyamanan mata Anda, siang maupun malam.",
-    icon: <Moon className="w-6 h-6 text-[var(--primary)]" />,
+      "Selalu dapatkan versi aplikasi terbaru langsung dari dalam aplikasi (In-App Update) tanpa perlu repot mencarinya di Google Play Store lagi.",
+    icon: <RefreshCw className="w-6 h-6 text-[var(--primary)]" />,
   },
 ];
 
