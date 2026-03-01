@@ -169,7 +169,7 @@ export function HeroSection() {
                 className="rounded-full h-12 px-8 text-base bg-background/50 backdrop-blur-sm border-2 hover:bg-[var(--primary)]/10 transition-colors"
               >
                 <a
-                  href="https://github.com/HiroAozora"
+                  href="https://github.com/HiroAozora/miawmatkul"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
