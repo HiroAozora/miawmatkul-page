@@ -56,8 +56,8 @@ export function HowToInstallSection() {
               Cara Install MiawMatkul
             </h2>
             <p className="text-[var(--muted-foreground)] text-lg mb-8">
-              Aplikasi saat ini masih dalam versi BETA dan belum rilis di Play
-              Store. Ikuti langkah mudah berikut untuk menginstal secara manual.
+              Aplikasi saat ini masih dalam versi awal dan belum rilis di Play
+              Store (mahal bgt loh ya 😹). Ikuti langkah2 di bawah cik.
             </p>
 
             <Accordion
@@ -98,12 +98,16 @@ export function HowToInstallSection() {
           >
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,var(--primary)/20_0%,transparent_100%)]"></div>
             <div className="text-center p-8 relative z-10">
-              <div className="w-24 h-24 bg-[var(--primary)]/20 rounded-2xl flex items-center justify-center mx-auto mb-6 transform rotate-12">
-                <Download className="w-12 h-12 text-[var(--primary)] -rotate-12" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Siap untuk digunakan</h3>
+              <img
+                src="/images/ngawi.png"
+                alt="Ilustrasi Ngawi"
+                className="w-32 h-32 md:w-48 md:h-48 object-contain mx-auto mb-6 drop-shadow-2xl hover:scale-105 transition-transform duration-300"
+              />
+              <h3 className="text-xl font-bold mb-2 text-balance italic">
+                "aplikasinya aman ga bang?"
+              </h3>
               <p className="text-[var(--muted-foreground)] max-w-xs mx-auto">
-                Perangkat Android versi 8.0 (Oreo) ke atas.
+                aman bgt loh ya, admin sigma soalnya 👅
               </p>
             </div>
           </motion.div>

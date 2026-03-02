@@ -134,17 +134,16 @@ export function HeroSection() {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
-              Nggak Ada Lagi Drama <br className="hidden md:block" />
+              Gak ada lagi kelen <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--primary)] to-emerald-400">
-                Salah Ruangan
+                lupa jadwal
               </span>{" "}
-              atau <br className="hidden lg:block" /> Lupa Laprak.
+              sama <br className="hidden lg:block" /> gatau ruangan.
             </h1>
 
             <p className="text-lg md:text-xl text-[var(--muted-foreground)] leading-relaxed">
-              Asisten pintar manajemen jadwal kuliah khusus mahasiswa. Pantau
-              jadwal, ruangan, dan deadline laporan praktikum dalam satu
-              genggaman.
+              Aplikasi buat liat jadwal matkul, reminder, sama info ruangan
+              (kalo ga ganti2 ruangan). Download apk nya langsung cik😹
             </p>
 
             <div className="flex flex-wrap items-center gap-4 pt-4">
@@ -203,7 +202,8 @@ export function HeroSection() {
               className="absolute w-[300px] md:w-[340px] bg-card border border-border rounded-3xl p-5 shadow-sm transform-gpu optimize-gpu transition-shadow hover:shadow-lg opacity-60 z-10 top-10 right-0 md:right-10"
             >
               <div className="flex justify-between items-start mb-2">
-                <span className="text-xs font-bold text-[var(--primary)] tracking-wider">
+                <span className="text-xs font-bold text-[var(--primary)] tracking-wider flex items-center gap-1">
+                  <MapPin className="w-3 h-3" />
                   KAMPUS IV TUNTUNGAN
                 </span>
                 <span className="px-2 py-0.5 bg-[var(--primary)]/10 text-[var(--primary)] rounded-full text-[10px] font-semibold">
@@ -213,7 +213,8 @@ export function HeroSection() {
               <h3 className="text-xl font-bold mb-1 tracking-tight text-card-foreground">
                 COMP. NETWORK
               </h3>
-              <p className="text-sm text-muted-foreground pb-4 border-b border-border/50">
+              <p className="text-sm text-muted-foreground pb-4 border-b border-border/50 flex items-center gap-1.5">
+                <Map className="w-4 h-4" />
                 Gedung Laboratorium • Lantai 1
               </p>
               <div className="pt-3">
@@ -239,7 +240,8 @@ export function HeroSection() {
               className="absolute w-[300px] md:w-[340px] bg-card border border-border/80 rounded-3xl p-5 shadow-md transform-gpu optimize-gpu transition-shadow hover:shadow-xl opacity-90 z-20 top-32 left-0 md:-left-8"
             >
               <div className="flex justify-between items-start mb-2">
-                <span className="text-xs font-bold text-[var(--primary)] tracking-wider">
+                <span className="text-xs font-bold text-[var(--primary)] tracking-wider flex items-center gap-1">
+                  <MapPin className="w-3 h-3" />
                   KAMPUS IV TUNTUNGAN
                 </span>
                 <span className="px-2 py-0.5 bg-[var(--primary)]/10 text-[var(--primary)] rounded-full text-[10px] font-semibold">
@@ -249,7 +251,8 @@ export function HeroSection() {
               <h3 className="text-xl font-bold mb-1 tracking-tight text-card-foreground">
                 FST-102
               </h3>
-              <p className="text-sm text-muted-foreground pb-4 border-b border-border/50">
+              <p className="text-sm text-muted-foreground pb-4 border-b border-border/50 flex items-center gap-1.5">
+                <Map className="w-4 h-4" />
                 Gedung SAINTEK • Lantai 1
               </p>
               <div className="pt-3">

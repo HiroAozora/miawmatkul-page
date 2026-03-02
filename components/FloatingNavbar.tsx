@@ -1,21 +1,60 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function FloatingNavbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { scrollY } = useScroll();
+  const [hidden, setHidden] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious() ?? 0;
+
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    if (latest > previous && latest > 100) {
+      setHidden(true);
+      setIsMobileMenuOpen(false); // Close dropdown if scrolling down
+    } else {
+      setHidden(false);
+    }
+
+    timeoutRef.current = setTimeout(() => {
+      setHidden(false);
+    }, 2000);
+  });
+
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+  }, []);
+
+  const desktopVariants = {
+    visible: { y: 0, x: "-50%", opacity: 1 },
+    hidden: { y: -100, x: "-50%", opacity: 0 },
+  };
+
+  const mobileVariants = {
+    visible: { y: 0, opacity: 1 },
+    hidden: { y: 100, opacity: 0 },
+  };
 
   return (
     <>
       {/* Desktop Navbar - Top Capsule */}
       <motion.nav
-        initial={{ y: -100, x: "-50%", opacity: 0 }}
-        animate={{ y: 0, x: "-50%", opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        variants={desktopVariants}
+        initial="visible"
+        animate={hidden ? "hidden" : "visible"}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
         className="hidden md:flex fixed top-6 left-1/2 z-50 transform-gpu items-center justify-between w-full max-w-3xl px-6 py-3 rounded-full bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md shadow-lg border border-white/20 dark:border-zinc-800/50"
       >
         <div className="flex items-center gap-2">
@@ -57,9 +96,10 @@ export function FloatingNavbar() {
 
       {/* Mobile Navbar - Bottom Curved */}
       <motion.nav
-        initial={{ y: 100, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        variants={mobileVariants}
+        initial="visible"
+        animate={hidden ? "hidden" : "visible"}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
         className="md:hidden fixed bottom-4 left-4 right-4 z-50 transform-gpu"
       >
         <div className="flex items-center justify-between px-4 py-3 rounded-2xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-lg shadow-xl border border-white/20 dark:border-zinc-800/50">

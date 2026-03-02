@@ -14,25 +14,25 @@ const features = [
   {
     title: "Jadwal & Ruangan Terorganisir",
     description:
-      "Semua jadwal kuliah harian dan ruangan tersusun rapi menggunakan sistem kalender yang dinamis, didukung database Isar yang sangat cepat.",
+      "Jadwal matkul sama info ruangan uda disusun rapi. Pokoknya rapi la tinggal diliat. Databasenya pakai Isar jadi cepat.",
     icon: <Calendar className="w-6 h-6 text-[var(--primary)]" />,
   },
   {
     title: "Notifikasi Otomatis (FCM)",
     description:
-      "Terintegrasi penuh dengan Firebase Cloud Messaging untuk menerima pengumuman mendadak atau informasi penting dari admin kampus secara real-time.",
+      "Karena pakai Firebase Cloud Messaging, jadi nanti kalo misalnya ada info mendadak, admin (gueh) bisa ngasi notif realtime.",
     icon: <Bell className="w-6 h-6 text-[var(--primary)]" />,
   },
   {
     title: "Template Jadwal Cepat",
     description:
-      "Nggak perlu input manual satu per satu! Tinggal ketik teks jadwal dari WA, dan sistem akan meng-extract data hari, jam, matkul, dosen, hingga ruangan secara otomatis.",
+      "Kalo males bikin satu2 jadwalnya, aman saja bes. Dah aku bikinkan template soalnya. Kalo mw req chat wa aja.",
     icon: <Sparkles className="w-6 h-6 text-[var(--primary)]" />,
   },
   {
     title: "Sistem Update OTA",
     description:
-      "Selalu dapatkan versi aplikasi terbaru langsung dari dalam aplikasi (In-App Update) tanpa perlu repot mencarinya di Google Play Store lagi.",
+      "Nanti kalo ada update bakal muncul popup di aplikasinya. Bisa update dari situ. Oiya ini gada di playstore ya.",
     icon: <RefreshCw className="w-6 h-6 text-[var(--primary)]" />,
   },
 ];
@@ -71,8 +71,7 @@ export function FeaturesSection() {
             Fitur Utama MiawMatkul
           </h2>
           <p className="text-[var(--muted-foreground)] text-lg">
-            Aplikasi yang didesain khusus untuk menyelesaikan masalah klasik
-            mahasiswa.
+            Semoga aplikasinya berguna wkwk.
           </p>
         </motion.div>
 

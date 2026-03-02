@@ -14,9 +14,9 @@ export function Footer() {
 
           <div className="text-center md:text-right">
             <p className="text-sm text-[var(--muted-foreground)]">
-              Dibuat dengan sakit pinggang oleh{" "}
+              Dibuat tanpa sawit oleh{" "}
               <a
-                href="https://github.com/hiromalasngedit"
+                href="https://github.com/HiroAozora"
                 target="_blank"
                 rel="noreferrer"
                 className="font-medium text-[var(--primary)] hover:underline"
@@ -25,7 +25,7 @@ export function Footer() {
               </a>
             </p>
             <p className="text-xs text-[var(--muted-foreground)] mt-1">
-              Mahasiswa Ilmu Komputer UINSU
+              Mahasigma Ilmu Komputer UINSU
             </p>
           </div>
         </div>
